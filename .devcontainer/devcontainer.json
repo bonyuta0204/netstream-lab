@@ -1,8 +1,8 @@
 {
 	"name": "Netstream Lab Dev Container",
-	"dockerFile": "../Dockerfile", // Path to your existing Dockerfile relative to the .devcontainer folder
-	"context": "..", // Set the context to the root of your project
-	"workspaceFolder": "/workspace", // Set this to your working directory inside the container
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
@@ -13,9 +13,7 @@
 			"terminal.integrated.shell.linux": "/bin/bash"
 		},
 		"extensions": [
-			"ms-vscode.cpptools", // Example extensions, you can add more
-			"ms-azuretools.vscode-docker",
-			"eamodio.gitlens"
+			"ms-vscode.cpptools"
 		]
 	}
 }
